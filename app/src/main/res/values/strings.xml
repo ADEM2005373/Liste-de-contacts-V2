@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Mes contacts</string>
+    <string name="titre_mes_contacts">Mes contacts</string>
+    <string name="titre_detail_contact">Détail du contact</string>
+    <string name="label_nom">Nom</string>
+    <string name="label_prenom">Prénom</string>
+    <string name="label_telephone">Téléphone</string>
+    <string name="label_email">E-mail</string>
+    <string name="btn_choisir_photo">Choisir une photo</string>
+    <string name="btn_prendre_photo">Prendre une photo</string>
+    <string name="btn_enregistrer">Enregistrer</string>
+    <string name="btn_annuler">Annuler</string>
+    <string name="desc_appeler">Appeler le contact</string>
+    <string name="desc_envoyer_email">Envoyer un e-mail au contact</string>
+    <string name="desc_photo_contact">Photo de profil du contact</string>
+    <string name="erreur_nom_obligatoire">Le nom est obligatoire</string>
+    <string name="erreur_prenom_obligatoire">Le prénom est obligatoire</string>
+    <string name="erreur_telephone_obligatoire">Le téléphone est obligatoire</string>
+    <string name="erreur_email_invalide">Veuillez saisir un e-mail valide</string>
+    <string name="erreur_application_introuvable">Aucune application compatible trouvée</string>
+    <string name="msg_contact_mis_a_jour">Contact mis à jour avec succès</string>
+    <string name="msg_photo_selectionnee">Photo mise à jour</string>
+    <string name="msg_operation_annulee">Modification annulée</string>
+</resources>

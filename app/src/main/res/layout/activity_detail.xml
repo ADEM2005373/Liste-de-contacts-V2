@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/fond_ecran">
+
+    <!-- En-tête personnalisé avec retour arrière et titre -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:background="@color/primary"
+        android:gravity="center_vertical"
+        android:elevation="4dp">
+
+        <ImageButton
+            android:id="@+id/btnRetour"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_call"
+            android:rotation="180"
+            android:contentDescription="Retour" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="16dp"
+            android:text="@string/titre_detail_contact"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:gravity="center_horizontal">
+
+            <!-- Photo du contact (Grande icône arrondie) -->
+            <FrameLayout
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginBottom="20dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:cardCornerRadius="50dp"
+                    app:cardElevation="3dp"
+                    app:cardBackgroundColor="#E0E0E0">
+
+                    <ImageView
+                        android:id="@+id/imgDetailPhoto"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_avatar_default"
+                        android:contentDescription="@string/desc_photo_contact" />
+                </androidx.cardview.widget.CardView>
+
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_gravity="bottom|end"
+                    android:background="@drawable/circle_avatar_bg"
+                    android:backgroundTint="@color/primary"
+                    android:padding="4dp"
+                    android:src="@drawable/ic_camera"
+                    android:contentDescription="Modifier photo" />
+            </FrameLayout>
+
+            <!-- Champ Nom -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_nom"
+                android:textColor="@color/texte_secondaire"
+                android:textSize="13sp" />
+
+            <EditText
+                android:id="@+id/etNom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Champ Prénom -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_prenom"
+                android:textColor="@color/texte_secondaire"
+                android:textSize="13sp" />
+
+            <EditText
+                android:id="@+id/etPrenom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Champ Téléphone avec bouton Appeler -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_telephone"
+                android:textColor="@color/texte_secondaire"
+                android:textSize="13sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="12dp">
+
+                <EditText
+                    android:id="@+id/etTelephone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="phone" />
+
+                <ImageButton
+                    android:id="@+id/btnAppeler"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_marginStart="8dp"
+                    android:background="@color/call_green"
+                    android:src="@drawable/ic_call"
+                    android:contentDescription="@string/desc_appeler" />
+            </LinearLayout>
+
+            <!-- Champ E-mail avec bouton Envoyer e-mail -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_email"
+                android:textColor="@color/texte_secondaire"
+                android:textSize="13sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="20dp">
+
+                <EditText
+                    android:id="@+id/etEmail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="textEmailAddress" />
+
+                <ImageButton
+                    android:id="@+id/btnEmail"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_marginStart="8dp"
+                    android:background="@color/email_blue"
+                    android:src="@drawable/ic_email"
+                    android:contentDescription="@string/desc_envoyer_email" />
+            </LinearLayout>
+
+            <!-- Boutons de gestion photo : Galerie et Caméra -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="20dp">
+
+                <Button
+                    android:id="@+id/btnChoisirPhoto"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="6dp"
+                    android:text="@string/btn_choisir_photo"
+                    android:backgroundTint="@color/photo_action"
+                    android:drawableStart="@drawable/ic_gallery"
+                    android:textAllCaps="false"
+                    android:textSize="13sp" />
+
+                <Button
+                    android:id="@+id/btnPrendrePhoto"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="6dp"
+                    android:text="@string/btn_prendre_photo"
+                    android:backgroundTint="@color/photo_action"
+                    android:drawableStart="@drawable/ic_camera"
+                    android:textAllCaps="false"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <!-- Bouton Enregistrer -->
+            <Button
+                android:id="@+id/btnEnregistrer"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="@string/btn_enregistrer"
+                android:backgroundTint="@color/save_button"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Bouton Annuler -->
+            <Button
+                android:id="@+id/btnAnnuler"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="@string/btn_annuler"
+                android:backgroundTint="@color/cancel_button"
+                android:textAllCaps="false"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

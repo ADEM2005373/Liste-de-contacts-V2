@@ -1,0 +1,14 @@
+<resources>
+    <color name="primary">#4A148C</color>
+    <color name="primary_dark">#311B92</color>
+    <color name="accent">#7C4DFF</color>
+    <color name="call_green">#2E7D32</color>
+    <color name="email_blue">#1976D2</color>
+    <color name="photo_action">#5E35B1</color>
+    <color name="save_button">#2E7D32</color>
+    <color name="cancel_button">#757575</color>
+    <color name="fond_ecran">#F5F5F7</color>
+    <color name="fond_carte">#FFFFFF</color>
+    <color name="texte_principal">#212121</color>
+    <color name="texte_secondaire">#757575</color>
+</resources>

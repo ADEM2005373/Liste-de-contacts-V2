@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="12dp"
+    android:gravity="center_vertical"
+    android:background="?android:attr/selectableItemBackground">
+
+    <!-- Photo de profil du contact -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="2dp"
+        app:cardBackgroundColor="#E0E0E0">
+
+        <ImageView
+            android:id="@+id/imgContact"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_avatar_default"
+            android:contentDescription="@string/desc_photo_contact" />
+    </androidx.cardview.widget.CardView>
+
+    <!-- Informations du contact (Nom, Prénom, Téléphone) -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginStart="16dp">
+
+        <TextView
+            android:id="@+id/txtNomPrenom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dupont Claire"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/texte_principal" />
+
+        <TextView
+            android:id="@+id/txtTelephone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="06 12 34 56 78"
+            android:textSize="14sp"
+            android:textColor="@color/texte_secondaire"
+            android:layout_marginTop="2dp" />
+    </LinearLayout>
+
+    <!-- Flèche / chevron vers le détail -->
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_arrow_right"
+        android:contentDescription="Ouvrir le contact" />
+
+</LinearLayout>
